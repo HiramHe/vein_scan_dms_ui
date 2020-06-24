@@ -7,7 +7,7 @@
 
 <script>
 // @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import HelloWorld from "@/components/HelloWorld";
 
 export default {
   name: "Home",
@@ -16,3 +16,12 @@ export default {
   }
 };
 </script>
+
+<style lang="less">
+/*每个页面单独设置html、body、app的宽度*/
+html,
+body,
+#app {
+  height: 100%;
+}
+</style>

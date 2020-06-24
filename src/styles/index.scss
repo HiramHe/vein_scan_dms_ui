@@ -1,0 +1,79 @@
+/*
+@import:将多个scss合并为一个.
+浏览器调试时，有些样式显示：user agent stylesheet。它指的是浏览器自动加上的样式，最底层，优先级很低，自己写样式覆盖即可。
+
+使用@mixin命令，定义一个代码块。
+根据需要加入参数。
+使用@include命令，调用mixin代码块。
+&：引用父选择器。
+padding:当前元素的子元素相对于当前元素；
+margin：当前元素相对于其父元素
+ */
+
+@import './btn.scss';
+@import './element-ui.scss';
+@import './mixin.scss';
+@import './sidebar.scss';
+@import './transition.scss';
+@import './variables.scss';
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html {
+  height: 100%;
+  font-size: 10px;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+}
+
+#app {
+  height: 100%;
+}
+
+label {
+  font-weight: 700;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+
+div:focus {
+  outline: none;
+}
+
+.clearfix {
+  &:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+}
+
+// main-container global css
+.app-container {
+  padding: 20px;
+}

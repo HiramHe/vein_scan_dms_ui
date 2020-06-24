@@ -1,3 +1,7 @@
+/*
+JavaScript 的语法检测工具-ESLint的配置
+ */
+
 module.exports = {
   root: true,
   env: {
@@ -9,7 +13,9 @@ module.exports = {
   },
   rules: {
     "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
-    "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off"
+    "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off",
+    'no-proto': 2,
+    "no-unused-vars": process.env.NODE_ENV === "production" ? "warn" : "off"
   },
   overrides: [
     {
